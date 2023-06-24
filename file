@@ -1,0 +1,25 @@
+class FileAnalyzer:
+    def __init__(self):
+        self.files = []
+
+    def add_file(self, file_name):
+        self.files.append(file_name)
+        print(f"File '{file_name}' added successfully.")
+
+    def analyze_files(self):
+        if not self.files:
+            print("No files added.")
+        else:
+            print("Analyzing files:")
+            for file in self.files:
+                # Perform analysis on each file
+                print(f"Analyzing '{file}'...")
+
+if __name__ == '__main__':
+    file_analyzer = FileAnalyzer()
+
+    file_analyzer.add_file("data.txt")
+    file_analyzer.add_file("report.docx")
+    file_analyzer.add_file("image.jpg")
+
+    file_analyzer.analyze_files()
